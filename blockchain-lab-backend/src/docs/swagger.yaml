@@ -1,0 +1,134 @@
+basePath: /
+definitions:
+  models.Response:
+    properties:
+      code:
+        description: 业务响应状态码
+        type: integer
+      message:
+        description: 提示信息
+        type: string
+    type: object
+host: 119.29.53.176:8080
+info:
+  contact:
+    email: yhh1934292134@163.com
+    name: 叶浩辉
+    url: blog.yehaohui.com
+  description: fabric-crud接口文档
+  termsOfService: http://swagger.io/terms/
+  title: Fabric
+  version: "1.0"
+paths:
+  /supplychain/:id:
+    delete:
+      description: 根据id删除一个信息
+      parameters:
+      - description: 要删除信息的ID
+        in: query
+        name: id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: 删除一个信息
+    get:
+      description: 根据id查询一个信息
+      parameters:
+      - description: 查询ID
+        in: query
+        name: id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: 查询一个信息
+    put:
+      consumes:
+      - application/json
+      description: 根据上传json创建
+      parameters:
+      - in: query
+        name: describe
+        type: string
+      - in: query
+        name: distributor
+        type: string
+      - in: query
+        name: expiry_date
+        type: string
+      - in: query
+        name: manufacturing_date
+        type: string
+      - in: query
+        name: producer
+        type: string
+      - in: query
+        name: product_id
+        type: string
+      - in: query
+        name: retailer
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: 创建一个信息
+  /supplychain/create:
+    post:
+      consumes:
+      - application/json
+      description: 根据上传json创建
+      parameters:
+      - in: query
+        name: describe
+        type: string
+      - in: query
+        name: distributor
+        type: string
+      - in: query
+        name: expiry_date
+        type: string
+      - in: query
+        name: manufacturing_date
+        type: string
+      - in: query
+        name: producer
+        type: string
+      - in: query
+        name: product_id
+        type: string
+      - in: query
+        name: retailer
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: 创建一个信息
+  /supplychains:
+    get:
+      description: 查询所有信息
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: 查询所有信息
+swagger: "2.0"

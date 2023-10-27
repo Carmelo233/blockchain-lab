@@ -1,0 +1,7 @@
+mspID: "Org1MSP"
+cryptoPath: "/home/yehh/fabric/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com"
+certPath: "/home/yehh/fabric/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+keyPath: "/home/yehh/fabric/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/"
+tlsCertPath: "/home/yehh/fabric/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
+peerEndpoint: "localhost:7051"
+gatewayPeer: "peer0.org1.example.com"
